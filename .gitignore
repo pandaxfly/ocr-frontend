@@ -10,6 +10,7 @@
 
 # production
 /build
+dev-auth.json
 
 # misc
 .DS_Store

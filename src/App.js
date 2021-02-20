@@ -5,12 +5,13 @@ import Tesseract  from '../node_modules/tesseract.js'
 function App() {
 
   function handleChange(e) {
+    // Frontend Tesseract Result
     Tesseract.recognize(e.target.files[0], 'eng',{ 
       logger: m => document.getElementById('status').innerHTML = m.status
     })
     .then(({ data: { text } }) => {
       document.getElementById('result').innerHTML = text;
-    })
+    });    
   }
 
   return (
