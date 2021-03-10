@@ -17,7 +17,7 @@ class App extends React.Component {
     formData.append('otherdata', 'test.jpg');
 
     const axios = require('axios');
-    axios.post('https://api.panyuehao.page/api/upload', formData)
+    axios.post('https://api.yuehao.dev/api/upload', formData)
     .then(res => { // then print response status
       console.log(res)
       document.getElementById('result_vision').innerHTML = res.data.text;

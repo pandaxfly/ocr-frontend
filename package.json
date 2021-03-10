@@ -2,7 +2,7 @@
   "name": "tesseract-ocr",
   "version": "0.1.0",
   "private": true,
-  "homepage": "tesseract-dev/",
+  "homepage": "",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",
@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy-gcp": "gsutil -m cp -r ./build/* gs://panyuehao.page/tesseract-dev/"
+    "deploy-gcp": "gsutil -m cp -r ./build/* gs://resume.yuehao.dev"
   },
   "eslintConfig": {
     "extends": [
