@@ -35,7 +35,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <input type="file" onChange={this.handleChange} /> 
           <br />
@@ -46,7 +46,7 @@ class App extends React.Component {
           <br />
           <h3> Vision API Result:</h3>
           <p id='result_vision'></p>
-        </header>
+        </header> */}
       </div>
     );
   }
