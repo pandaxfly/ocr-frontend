@@ -36,5 +36,19 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <div id="resume-agent">
+      <link rel="stylesheet" href="%PUBLIC_URL%/chatbot.css" />
+      <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+      <df-messenger
+        chat-icon="https:&#x2F;&#x2F;storage.googleapis.com&#x2F;cloudprod-apiai&#x2F;da99d028-2cee-49b8-b54a-36cf608c8117_x.png"
+        intent="WELCOME"
+        chat-title="Yuehao's Bot"
+        agent-id="cf227d78-6dde-4371-b1c5-a86cfcdc5629"
+        language-code="en"
+      ></df-messenger>
+
+    <script src="%PUBLIC_URL%/chatbot.js"></script>
+    </div>
+    
   </body>
 </html>
