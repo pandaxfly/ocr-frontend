@@ -9,6 +9,9 @@ import EduExp from '../expedu/ExpEdu.jsx';
 class FixedSlideLayout extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      experience: 'all'
+    };
   }
 
   render() {
@@ -17,10 +20,10 @@ class FixedSlideLayout extends React.Component {
     const { TabPane } = Tabs;
 
     const siderStyle = {
-      overflow: 'auto',
+      width: '25%',
       height: '100vh',
+      overflow: 'auto',
       position: 'fixed',
-      left: 0,
     };
     const gridStyle = {
       width: '33.33%',
@@ -33,7 +36,7 @@ class FixedSlideLayout extends React.Component {
           <div className="logo">resume.yuehao.dev</div>
 
           <Anchor>
-            <Link href="#hero" title="Home" />
+            <Link href="#hero" title="Summary" />
             <Link href="#about" title="About" />
             <Link href="#experience" title="Experience" />
             <Link href="#certification" title="Certification" />
@@ -65,30 +68,21 @@ class FixedSlideLayout extends React.Component {
                 </Col>
               </Row>
 
-              <h2 >About</h2>
-              <div id="About">
+              <Row id="about">
+                <h2 >About</h2>
                 Technical lead of solution delivery team. Responsible for solution design and delivery. Managed and led the onshore development team of 4 members. Analysed user requirement, designed product roadmap and managed client’s expectation on the solutions. Delivered full stack web application based on Java backend and Angular frontend that communicates via REST API. Integrated the solution in fully managed on-prem infrastructure. And led the client value creation by solving complex business problems.
-              </div>
+              </Row>
               
-
-              <Divider orientation="left">Experience</Divider>
               <div id="experience">
-                <Tabs defaultActiveKey="1" centered>
-                  <TabPane tab="All" key="1">
-                    Content of Tab Pane 1
-                  </TabPane>
-                  <TabPane tab="Experience" key="2">
-                    
-                  </TabPane>
-                  <TabPane tab="Education" key="3">
-                    
-                  </TabPane>
-                  <TabPane tab="Project" key="4">
-                    
-                  </TabPane>
+                <Divider orientation="left">Experience</Divider>
+                <Tabs centered defaultActiveKey="all" onTabClick={(key)=> this.setState({ experience: key })} >
+                  <TabPane tab="All" key="all"></TabPane>
+                  <TabPane tab="Career" key="career"></TabPane>
+                  <TabPane tab="Education" key="education"></TabPane>
+                  <TabPane tab="Project" key="project"></TabPane>
                 </Tabs>
 
-                <EduExp tab='all'/>
+                <EduExp tab={this.state.experience} />
                  
                 <br />
                 <br />
@@ -127,15 +121,6 @@ class FixedSlideLayout extends React.Component {
                     </Card.Grid>
                   </Card>
                 </div>
-              </div>
-
-              <Divider orientation="left">Education</Divider>
-              
-              <div id="education">
-                <br />
-                Education
-                <br />
-                <br />
               </div>
               
             </div>

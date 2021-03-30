@@ -1,6 +1,6 @@
 const expEduData = [
   { 
-    type: 'experience', 
+    type: 'career', 
     year: '2017-2021', 
     title: 'Senior Software Engineer', 
     organization: 'Accenture',
@@ -35,7 +35,7 @@ const expEduData = [
     highlights: []
   },
   { 
-    type: 'experience', 
+    type: 'career', 
     year: '2015-2017', 
     title: 'Software Engineering Analyst', 
     organization: 'Accenture',
