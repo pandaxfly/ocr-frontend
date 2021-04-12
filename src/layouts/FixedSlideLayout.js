@@ -1,10 +1,11 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Row, Col, Divider, Layout, Anchor, Collapse, Card, Tabs } from 'antd';
+import { Row, Col, Divider, Layout, Anchor, Card, Tabs } from 'antd';
 import { LinkedinFilled, GithubFilled } from '@ant-design/icons';
 import './FixedSlideLayout.css';
 
 import EduExp from '../expedu/ExpEdu.jsx';
+import Cert from '../cert/Cert';
 
 class FixedSlideLayout extends React.Component {
   constructor(props) {
@@ -25,10 +26,7 @@ class FixedSlideLayout extends React.Component {
       overflow: 'auto',
       position: 'fixed',
     };
-    const gridStyle = {
-      width: '33.33%',
-      textAlign: 'center',
-    };
+    
 
     return (
       <Layout>
@@ -91,35 +89,7 @@ class FixedSlideLayout extends React.Component {
               <Divider orientation="left">Certification</Divider>
               <div id="certification">
                 <div className="site-card-wrapper">
-                  <Card>
-                    <Card.Grid style={gridStyle}>
-                      <a href="https://www.credential.net/62c10db7-753a-4417-a92e-e7c077437dfa" target="_blank">
-                        <img className="cert-logo" src="/logo/lockup_cloud_main.png" alt="gcp" width="60" height="60" /> 
-                        <br />
-                        Associate Cloud Engineer
-                        <br />
-                        Google Cloud Platform
-                      </a>
-                    </Card.Grid>
-                    <Card.Grid style={gridStyle}>
-                      <a href="https://www.icagile.com/Certification/Verify-Credentials/ctl/UserDetails/mid/697/uid/a262da85-69bc-4716-891f-e8ee105ecb92" target="_blank">
-                        <img className="cert-logo" src="/logo/ICA-logo.png" alt="ica" width="114" /> 
-                        <br />
-                        ICAgile Certified Professional
-                        <br />
-                        ICAgile
-                      </a>
-                    </Card.Grid>
-                    <Card.Grid style={gridStyle}>
-                      <a href="https://university.mongodb.com/certification/certificate/885613572" target="_blank">
-                        <img className="cert-logo" src="/logo/MongoDB_LogoStacked_FullColorBlack_RGB.png" alt="mongodb" width="60" height="60" /> 
-                        <br />
-                        MongoDB Certified Developer
-                        <br />
-                        MongoDB
-                      </a>
-                    </Card.Grid>
-                  </Card>
+                  <Cert />
                 </div>
               </div>
               
