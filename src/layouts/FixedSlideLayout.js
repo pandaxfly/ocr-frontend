@@ -44,7 +44,7 @@ class FixedSlideLayout extends React.Component {
 
           <div className="social_media">
             <a href="https://www.linkedin.com/in/yuehao-pan" target="_blank"><LinkedinFilled /></a>
-            <a href="https://www.linkedin.com/in/yuehao-pan" target="_blank"><GithubFilled /></a>
+            <a href="https://github.com/pandaxfly" target="_blank"><GithubFilled /></a>
           </div>
           
         </Sider>
