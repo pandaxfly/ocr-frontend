@@ -31,15 +31,13 @@ class FixedSlideLayout extends React.Component {
     return (
       <Layout>
         <Sider style={siderStyle}>
-          <div className="logo">resume.yuehao.dev</div>
+          <div className="logo">resume.yuehao.dev<br />(Unver Development)</div>
 
           <Anchor>
             <Link href="#hero" title="Summary" />
             <Link href="#about" title="About" />
             <Link href="#experience" title="Experience" />
             <Link href="#certification" title="Certification" />
-            <Link href="#education" title="Education" />
-            <Link href="#interest" title="Interest" />
           </Anchor>
 
           <div className="social_media">
