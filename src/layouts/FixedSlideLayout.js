@@ -15,12 +15,30 @@ class FixedSlideLayout extends React.Component {
     };
   }
 
+  continueScroll = (e) => {
+    const scrollPos = document.getElementById('about').getBoundingClientRect()
+    window.scrollTo({
+      top: scrollPos.top,
+      behavior: 'smooth'
+    });
+  }
+
   downloadResume = (e) => {
-    console.log('clicked');
+    const axios = require('axios');
+    axios.get('/doc/PAN_Yuehao_Resume.pdf', {
+      responseType: 'blob'
+    })
+    .then(res => {
+      const url = window.URL.createObjectURL(new Blob([res.data]));
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'PAN_Yuehao_Resume.pdf');
+      link.click();
+    });
   }
 
   render() {
-    const { Title, Text } = Typography;
+    const { Title, Paragraph, Text } = Typography;
     const { Content, Footer, Sider } = Layout;
     const { Link } = Anchor;
     const { TabPane } = Tabs;
@@ -48,7 +66,6 @@ class FixedSlideLayout extends React.Component {
             <a href="https://www.linkedin.com/in/yuehao-pan" target="_blank"><LinkedinFilled /></a>
             <a href="https://github.com/pandaxfly" target="_blank"><GithubFilled /></a>
           </div>
-          
         </Sider>
 
         <Layout className="site-layout" style={{ marginLeft: 200 }}>
@@ -59,7 +76,7 @@ class FixedSlideLayout extends React.Component {
                   <p id="greeting">Hi, I'm</p>
                   <Title>Pan Yuehao</Title>
                   <hr />
-                  <Text type="secondary">Technical Development Lead</Text>
+                  <Text type="secondary">(Ex-)Development Team Lead in IT Consulting Firm</Text>
                   <br />
                   <br />
                 </Col>
@@ -70,14 +87,16 @@ class FixedSlideLayout extends React.Component {
                 <Col span={12} className="box-primary" onClick={this.downloadResume}>
                   <br />DOWNLOAD RESUME<br /><br />
                 </Col>
-                <Col span={12} className="box-default">
+                <Col span={12} className="box-default" onClick={this.continueScroll}>
                   <br />VIEW PORTFOLIO<br /><br />
                 </Col>
               </Row>
               <br />
               <div id="about">
-                <Divider orientation="right"><Title level={3}>About</Title></Divider>
-                Technical lead of solution delivery team. Responsible for solution design and delivery. Managed and led the onshore development team of 4 members. Analysed user requirement, designed product roadmap and managed client’s expectation on the solutions. Delivered full stack web application based on Java backend and Angular frontend that communicates via REST API. Integrated the solution in fully managed on-prem infrastructure. And led the client value creation by solving complex business problems.
+                <Divider orientation="left"><Title level={3}>About</Title></Divider>
+                <Paragraph>
+                  Solution delivery lead in IT consulting. Past experience in digital government transformation. Passionate in engineering and science.
+                </Paragraph>
               </div>
               
               <div id="experience">
