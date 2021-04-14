@@ -1,6 +1,6 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Row, Col, Divider, Layout, Anchor, Card, Tabs } from 'antd';
+import { Typography, Row, Col, Divider, Layout, Anchor, Tabs } from 'antd';
 import { LinkedinFilled, GithubFilled } from '@ant-design/icons';
 import './FixedSlideLayout.css';
 
@@ -15,7 +15,12 @@ class FixedSlideLayout extends React.Component {
     };
   }
 
+  downloadResume = (e) => {
+    console.log('clicked');
+  }
+
   render() {
+    const { Title, Text } = Typography;
     const { Content, Footer, Sider } = Layout;
     const { Link } = Anchor;
     const { TabPane } = Tabs;
@@ -27,7 +32,6 @@ class FixedSlideLayout extends React.Component {
       position: 'fixed',
     };
     
-
     return (
       <Layout>
         <Sider style={siderStyle}>
@@ -53,24 +57,31 @@ class FixedSlideLayout extends React.Component {
               <Row id="hero" align="bottom">
                 <Col span={12}>
                   <p id="greeting">Hi, I'm</p>
-                  <h1>Pan Yuehao</h1>
+                  <Title>Pan Yuehao</Title>
                   <hr />
-                  <p>Technical Development Lead</p>
+                  <Text type="secondary">Technical Development Lead</Text>
+                  <br />
+                  <br />
                 </Col>
                 <Col span={12}><img src="/profile.jpg" width="100%"/></Col>
+              </Row>
 
-                <Col>
-                
+              <Row className="text-center box" justify="center" style={{ alignItems: "center" }}>
+                <Col span={12} className="box-primary" onClick={this.downloadResume}>
+                  <br />DOWNLOAD RESUME<br /><br />
+                </Col>
+                <Col span={12} className="box-default">
+                  <br />VIEW PORTFOLIO<br /><br />
                 </Col>
               </Row>
-
-              <Row id="about">
-                <h2 >About</h2>
+              <br />
+              <div id="about">
+                <Divider orientation="right"><Title level={3}>About</Title></Divider>
                 Technical lead of solution delivery team. Responsible for solution design and delivery. Managed and led the onshore development team of 4 members. Analysed user requirement, designed product roadmap and managed client’s expectation on the solutions. Delivered full stack web application based on Java backend and Angular frontend that communicates via REST API. Integrated the solution in fully managed on-prem infrastructure. And led the client value creation by solving complex business problems.
-              </Row>
+              </div>
               
               <div id="experience">
-                <Divider orientation="left">Experience</Divider>
+                <Divider orientation="left"><Title level={3}>Experience</Title></Divider>
                 <Tabs centered defaultActiveKey="all" onTabClick={(key)=> this.setState({ experience: key })} >
                   <TabPane tab="All" key="all"></TabPane>
                   <TabPane tab="Career" key="career"></TabPane>
@@ -84,7 +95,7 @@ class FixedSlideLayout extends React.Component {
                 <br />
               </div>
               
-              <Divider orientation="left">Certification</Divider>
+              <Divider orientation="left"><Title level={3}>Certification</Title></Divider>
               <div id="certification">
                 <div className="site-card-wrapper">
                   <Cert />

@@ -21,7 +21,7 @@ class CertItem extends React.Component {
     return (
       certItems.map((cert, ind) => {
         return (
-          <Card.Grid style={gridStyle}>
+          <Card.Grid key={ind+1} style={gridStyle}>
             <a href={cert.source} target="_blank" rel="noopener">
               <img className="cert-logo" src={`/logo/${cert.logo}`} alt="mongodb" width="60" height="60" /> 
               <br />
