@@ -21,7 +21,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy-gcp": "gsutil -m cp -r ./build/* gs://resume.yuehao.dev"
+    "deploy-gcp": "gsutil cp -r ./build/* gs://resume.yuehao.dev"
   },
   "eslintConfig": {
     "extends": [
