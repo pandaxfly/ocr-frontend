@@ -1,3 +1,15 @@
+.page-anchor {
+  margin-top: 40vh;
+  padding: 5%;
+}
+
+.page-anchor .ant-anchor-link-title{
+  color: white;
+  font-weight: bold;
+}
+
+
+
 .box {
   color: white;
   height: 40px;
@@ -11,3 +23,4 @@
 .box-default {
   background-color: #001529;
 }
+

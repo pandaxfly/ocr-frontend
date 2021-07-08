@@ -1,6 +1,6 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Typography, Row, Col, Divider, Layout, Anchor, Tabs } from 'antd';
+import { Typography, Row, Col, Divider, Layout, Anchor, Tabs, BackTop } from 'antd';
 import { LinkedinFilled, GithubFilled } from '@ant-design/icons';
 import './FixedSlideLayout.css';
 
@@ -49,18 +49,23 @@ class FixedSlideLayout extends React.Component {
       overflow: 'auto',
       position: 'fixed',
     };
+
+    const colorWhite = {
+      color: 'white'
+    }
     
     return (
       <Layout>
         <Sider style={siderStyle}>
           <div className="logo">resume.yuehao.dev<br />(Under Development)</div>
 
-          <Anchor>
-            <Link href="#hero" title="Summary" />
-            <Link href="#about" title="About" />
-            <Link href="#experience" title="Experience" />
-            <Link href="#certification" title="Certification" />
+          <Anchor className="page-anchor">
+            <Link href="#hero" title="Summary" style={colorWhite}/>
+            <Link href="#about" title="About" style={colorWhite}/>
+            <Link href="#experience" title="Experience" style={colorWhite}/>
+            <Link href="#certification" title="Certification" style={colorWhite}/>
           </Anchor>
+        
 
           <div className="social_media">
             <a href="https://www.linkedin.com/in/yuehao-pan" target="_blank"><LinkedinFilled /></a>
@@ -127,9 +132,12 @@ class FixedSlideLayout extends React.Component {
               
             </div>
           </Content>
+          <BackTop />
           <Footer style={{ textAlign: 'center' }}>React &#38; Ant Design are used in this page</Footer>
         </Layout>
       </Layout>
+
+      
     )
   }
 }
