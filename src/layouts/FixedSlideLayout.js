@@ -25,14 +25,14 @@ class FixedSlideLayout extends React.Component {
 
   downloadResume = (e) => {
     const axios = require('axios');
-    axios.get('/doc/PAN_Yuehao_Resume.pdf', {
+    axios.get('/doc/PAN_Yuehao_CV.pdf', {
       responseType: 'blob'
     })
     .then(res => {
       const url = window.URL.createObjectURL(new Blob([res.data]));
       const link = document.createElement('a');
       link.href = url;
-      link.setAttribute('download', 'PAN_Yuehao_Resume.pdf');
+      link.setAttribute('download', 'PAN_Yuehao_CV.pdf');
       link.click();
     });
   }
@@ -76,7 +76,11 @@ class FixedSlideLayout extends React.Component {
                   <p id="greeting">Hi, I'm</p>
                   <Title>Pan Yuehao</Title>
                   <hr />
-                  <Text type="secondary">(Ex-)Development Team Lead in IT Consulting Firm</Text>
+                  <Text type="secondary">
+                    Technical Delivery Lead <br /> 
+                    Cloud Advocate <br /> 
+                    2x GCP | CKA
+                  </Text>
                   <br />
                   <br />
                 </Col>
@@ -92,10 +96,10 @@ class FixedSlideLayout extends React.Component {
                 </Col>
               </Row>
               <br />
-              <div id="about">
-                <Divider orientation="left"><Title level={3}>About</Title></Divider>
+              <div id="about"> <br />
+                {/* <Divider orientation="left"><Title level={3}>About</Title></Divider> */}
                 <Paragraph>
-                  Solution delivery lead in IT consulting. Past experience in digital government transformation. Passionate in engineering and science.
+                  Five years’ experience in technology consulting, specialized in delivering enterprise technical solution implementations. Cloud advocate who is passionate in data science. Linux Foundation Certified Kubernetes Administrator, Google certified Associate Cloud Engineer and Professional Machine Learning Engineer.
                 </Paragraph>
               </div>
               
