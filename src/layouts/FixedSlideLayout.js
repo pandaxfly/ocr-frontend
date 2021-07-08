@@ -1,7 +1,7 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Typography, Row, Col, Divider, Layout, Anchor, Tabs, BackTop } from 'antd';
-import { LinkedinFilled, GithubFilled } from '@ant-design/icons';
+import { Typography, Row, Col, Divider, Layout, Anchor, Space, Button, Tabs, BackTop } from 'antd';
+import { LinkedinFilled, GithubFilled, MailOutlined } from '@ant-design/icons';
 import './FixedSlideLayout.css';
 
 import EduExp from '../expedu/ExpEdu.jsx';
@@ -65,11 +65,14 @@ class FixedSlideLayout extends React.Component {
             <Link href="#experience" title="Experience" style={colorWhite}/>
             <Link href="#certification" title="Certification" style={colorWhite}/>
           </Anchor>
-        
 
           <div className="social_media">
-            <a href="https://www.linkedin.com/in/yuehao-pan" target="_blank"><LinkedinFilled /></a>
-            <a href="https://github.com/pandaxfly" target="_blank"><GithubFilled /></a>
+          <Space size="middle"> 
+            <Button type="default" href="https://www.linkedin.com/in/yuehao-pan" target="_blank" ghost><LinkedinFilled /></Button>
+            <Button type="default" href="https://github.com/pandaxfly" target="_blank" ghost><GithubFilled  /></Button>
+            <Button type="default" href = "mailto: yuehao.pan92@gmail.com" ghost><MailOutlined /></Button>
+          </Space>
+            
           </div>
         </Sider>
 
