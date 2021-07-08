@@ -20,7 +20,7 @@ class Cert extends React.Component {
       textAlign: 'center',
       width: '33.33%',
       fontSize: '13px',
-      minHeight: '168px',
+      minHeight: '188px',
     };
 
     return (
@@ -29,7 +29,7 @@ class Cert extends React.Component {
         return (
           <Card.Grid key={ind+1} style={gridStyle}>
             <a href={cert.source} target="_blank" rel="noopener">
-              <img className="cert-logo" src={`/logo/${cert.logo}`} alt="mongodb" width="60" height="60" /> 
+              <img className="cert-logo" src={`/logo/${cert.logo}`} alt={cert.logoAlt} width="60" height="60" /> 
               <br />
               <Text>{cert.title}</Text>
               <br />
