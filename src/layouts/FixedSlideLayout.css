@@ -1,14 +1,22 @@
 .page-anchor {
-  margin-top: 40vh;
+  margin-top: 20vh;
   padding: 5%;
+}
+
+.social_media {
+  position: absolute;
+  bottom: 2vh;
+  width: 95%;
+}
+
+.social_media .ant-space {
+  float: right;
 }
 
 .page-anchor .ant-anchor-link-title{
   color: white;
   font-weight: bold;
 }
-
-
 
 .box {
   color: white;
@@ -24,12 +32,3 @@
   background-color: #001529;
 }
 
-.social_media {
-  position: absolute;
-  bottom: 2vh;
-  width: 95%;
-}
-
-.social_media .ant-space {
-  float: right;
-}
