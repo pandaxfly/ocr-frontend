@@ -1,11 +1,12 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import { Typography, Row, Col, Divider, Layout, Anchor, Space, Button, Tabs, BackTop } from 'antd';
+import { Typography, Row, Col, Divider, Layout, Anchor, Space, Button, Tabs, Card, BackTop } from 'antd';
 import { LinkedinFilled, GithubFilled, MailOutlined } from '@ant-design/icons';
 import './FixedSlideLayout.css';
 
 import EduExp from '../expedu/ExpEdu.jsx';
 import Cert from '../cert/Cert';
+import ContactForm from '../contact/ContactForm';
 
 class FixedSlideLayout extends React.Component {
   constructor(props) {
@@ -64,6 +65,7 @@ class FixedSlideLayout extends React.Component {
             <Link href="#about" title="About" style={colorWhite}/>
             <Link href="#experience" title="Experience" style={colorWhite}/>
             <Link href="#certification" title="Certification" style={colorWhite}/>
+            <Link href="#contact" title="Contact" style={colorWhite}/>
           </Anchor>
 
           <div className="social_media">
@@ -131,6 +133,28 @@ class FixedSlideLayout extends React.Component {
                 <div className="site-card-wrapper">
                   <Cert />
                 </div>
+              </div>
+
+              <Divider orientation="left"><Title level={3}>Contact</Title></Divider>
+              <div id="contact">
+                <Row gutter={16} align="top">
+                  <Col span={12}>
+                    <ContactForm />
+                  </Col>
+                  <Col span={12}>
+                    <Card className="contact-image-background">
+                      <p className='contact-title'><b>Let's Talk!</b></p>
+                      <p></p>
+                      <div className="contact-info">
+                        <p>(65) 9075 3719</p>
+                        <p>yuehao.pan@gmail.com</p>
+                        <p>28B Jln Lempeng, Singapore</p>
+                      </div>
+                    </Card>
+                    
+                  </Col>
+                </Row>
+                
               </div>
               
             </div>

@@ -32,3 +32,16 @@
   background-color: #001529;
 }
 
+.contact-image-background {
+  height: 188px;
+  color: white;
+  background-color: #334452;
+}
+
+.contact-title {
+  font-size: 20px;
+}
+.contact-info p {
+  float: right;
+}
+
