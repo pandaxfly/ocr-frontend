@@ -3,7 +3,7 @@ import React from 'react';
 import { Form, Input, Button  } from 'antd';
 import { SmileOutlined, MailOutlined } from '@ant-design/icons';
 
-const CONTACT_ENDPOINT = '/'
+const CONTACT_ENDPOINT = 'http://ec2-18-141-185-52.ap-southeast-1.compute.amazonaws.com:3000/api/send-message'
 
 class Cert extends React.Component {
   constructor(props) {
