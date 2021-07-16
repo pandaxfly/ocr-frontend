@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Tesseract  from '../node_modules/tesseract.js';
+//import Tesseract  from '../node_modules/tesseract.js';
 
 class App extends React.Component {
   //let uploadedFile = null;
@@ -24,12 +24,12 @@ class App extends React.Component {
     });
 
     // Frontend Tesseract Result
-    Tesseract.recognize(e.target.files[0], 'eng',{ 
-      logger: m => document.getElementById('status').innerHTML = m.status
-    })
-    .then(({ data: { text } }) => {
-      document.getElementById('result_tess').innerHTML = text;
-    });
+    // Tesseract.recognize(e.target.files[0], 'eng',{ 
+    //   logger: m => document.getElementById('status').innerHTML = m.status
+    // })
+    // .then(({ data: { text } }) => {
+    //   document.getElementById('result_tess').innerHTML = text;
+    // });
   }
 
   render() {
