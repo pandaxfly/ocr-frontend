@@ -26,7 +26,7 @@ class FixedSlideLayout extends React.Component {
 
   downloadResume = (e) => {
     const axios = require('axios');
-    axios.get('/doc/PAN_Yuehao_CV.pdf', {
+    axios.get('/doc/Pan_Yuehao_CV.pdf', {
       responseType: 'blob'
     })
     .then(res => {

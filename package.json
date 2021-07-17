@@ -21,7 +21,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "deploy-gcp": "gsutil cp -r ./build/* gs://resume.yuehao.dev",
-    "deploy-aws": "react-scripts build; aws s3 rm s3://resume.yuehao --recursive; aws s3 cp ./build/ s3://resume.yuehao --recursive"
+    "deploy-aws": "react-scripts build; aws s3 rm s3://resume.yuehao --recursive; aws s3 cp ./build/ s3://resume.yuehao --recursive",
+    "deploy-ec2": "scp -r ./build ec2-user@ec2-18-141-185-52.ap-southeast-1.compute.amazonaws.com"
   },
   "eslintConfig": {
     "extends": [
