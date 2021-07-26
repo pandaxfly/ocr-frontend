@@ -31,7 +31,7 @@ const expEduData = [
     year: '2017-2018', 
     title: 'Co-Founder & Technical Director', 
     organization: 'FootySG',
-    description: 'One of the two founders of FootySG, a mobile platform that connects futsal players with field owners. The platform is to prosper Singapore futsal game market. The app had successfully gained over 800 players and 2 business partners after 11 months of the first release. FootySG has been acquired by Rovo on 14-Aug-2018.',
+    description: 'One of the two founders of FootySG, a mobile platform that connects futsal players with field owners. The platform is to prosper Singapore futsal game market. The app had successfully gained over 800 players and 2 business partners after 11 months of the first release. FootySG has been acquired by Rovo on 14th Aug 2018.',
     highlights: [
       {
         title: 'FootySG',
@@ -45,7 +45,7 @@ const expEduData = [
     year: '2015-2017', 
     title: 'Software Engineering Analyst', 
     organization: 'Accenture',
-    description: 'Subject matter expert in the application development and server infrastructure team. Experienced in web application development, software architecture design and system integration.',
+    description: 'Subject matter expert in the app development and server infrastructure team. Experienced in web development, application architecture design and system integration.',
     highlights: [
       {
         title: 'Digital Portal',
@@ -59,7 +59,7 @@ const expEduData = [
     year: '2014-2015', 
     title: 'Student Researcher', 
     organization: 'Institute for Infocomm Research',
-    description: 'Worked on the comparison between classic Neural Networks and multilayer Convolutional Neural Networks (CNN) applied in real time MRI image data, exploring self-learnt features by visualizing hidden layers in CNN.',
+    description: 'Worked on the comparison between classic Neural Networks and multi-layer Convolutional Neural Networks (CNN) applied in real time MRI image data, exploring self-learnt features by visualizing hidden layers in CNN.',
     highlights: [
       {
         title: 'EMBC 2015 Conference Paper',

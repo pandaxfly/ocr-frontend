@@ -109,7 +109,7 @@ class FixedSlideLayout extends React.Component {
               <div id="about"> <br />
                 {/* <Divider orientation="left"><Title level={3}>About</Title></Divider> */}
                 <Paragraph>
-                  Five years’ experience in technology consulting, specialized in delivering enterprise technical solution implementations. Cloud advocate who is passionate in data science. Linux Foundation Certified Kubernetes Administrator, Google certified Associate Cloud Engineer and Professional Machine Learning Engineer.
+                  Five years’ experience in technology consulting, specialized in delivering enterprise technical solution implementations. Linux Foundation Certified Kubernetes Administrator, Google certified Associate Cloud Engineer and Professional Machine Learning Engineer.
                 </Paragraph>
               </div>
               
